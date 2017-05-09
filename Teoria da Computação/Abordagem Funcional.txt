@@ -1,0 +1,27 @@
+** Abordagem Funcional para o estudo da computação
+	Não estamos interessados em programas como algoritmos que executam um passo após o outro.
+	Programação baseada em funções
+	Uma função é um objeto para um determinado conjunto de valores de entrada (domínio) produz para cada elemento do domínio
+	um elemento na imagem (saída).
+	Esta abstração é poderosa, pois podemos trabalhar basicamente qualquer coisa.
+
+
+Funções Recursivas Parciais
+	Funções recursivas de KLEENE
+		Primeiro formalismo funcional equivalente a MT
+	Linguagem e cálculo LAMBDA
+		Base de todas as linguages funcionais: LISP, ML, HASKELL, OCAML, F#, ELM, além de diversas extensões em JAVA, C#, C++, etc).
+		Base das teorias formais de sistemas de tipos que permitem inferência de tipos.
+
+Função recursiva de KLEENE
+	As funções recursivas parciais propostas por Kleene são funções formadas a partir de funções básicas ou primitivas, combinadas através de três
+	mecanismos:
+		--> Composição (de funções)
+		--> Recursão (de função)
+		--> Mimização (de função)
+
+	O formalismo de funções recursivas pasiveis de Kleene é equivalente as funções computáveis por máquinas de Turing (ou qualquer outra máquina 
+	equivalente), ou seja:
+		--> Uma função é Turing-computável se e somente se é uma função recursiva parcial de Kleene.
+	Além disso também é possível  provar que uma função é Turing-computável em uma máquina que sempre para se e somente se é uma função recursiva
+	total de Kleene.
