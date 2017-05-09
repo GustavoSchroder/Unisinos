@@ -13,8 +13,8 @@ A simulação de P em uma máquina de Turing M, tem a seguinte organização:
 	-> Registrador Y: representação unários das células ímpares
 	
 		0 1 1 1 1 1 1 1 1 1 b 1 b 1 b
-	      x y x y x y x y x y x y x y 
-		  y = 4 
+	    b x y x y x y x y x y x y x y 
+		y = 4 
 
 	-> Rótulos de intruções: cada rótulo r de p coresponde a um estado qr de M. Os rótulos iniciais e finais correspondem aos estados iniciais e finais.
 	-> Programa: Cada intrução do programa p é como segue:
@@ -26,3 +26,9 @@ A simulação de P em uma máquina de Turing M, tem a seguinte organização:
 		--> Subtração: 
 				1) No estado qr pesquisa as células pares (se A = X) ou ímpares (se A = Y) até encontrar o último símbolo 1, que é substituido por branco.
 				2) Reposiciona a cabeça no início da fila e transaciona para o estado fs.
+		--> Teste 1: Se A = 0 então vá S senão vá Teste
+				1) No estado qr se a primeira célula por (caso A = X) ou ímpar (caso A = Y)for um branco (número 0), repociona o cabeçote para o início da fita e
+				transiciona para Qs, senão reposiciona o cabeçote para o início e transiciona para Qt.
+				
+Máquinas de Turing >= Máquinas Norma
+Máquinas Norma >= Máquinas de Turing
