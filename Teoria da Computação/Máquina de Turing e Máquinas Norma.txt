@@ -16,13 +16,13 @@ A simulação de P em uma máquina de Turing M, tem a seguinte organização:
 	      x y x y x y x y x y x y x y 
 		  y = 4 
 
-	-> Rótulos de intruções: cada rótulo r de p coresponde a um estado fr de M. Os rótulos iniciais e finais correspondem aos estados iniciais e finais.
+	-> Rótulos de intruções: cada rótulo r de p coresponde a um estado qr de M. Os rótulos iniciais e finais correspondem aos estados iniciais e finais.
 	-> Programa: Cada intrução do programa p é como segue:
 		--> Adição: r: faça A := A + 1 vá Subtração
 			Simulada por uma "mini" máquina de Turing que:
-				1) no estado fr move a cabeça pesquisando as células pares (se A = X) ou ímpares (se A = Y) até encontrar o 1º branco, que é, então substituido
+				1) no estado qr move a cabeça pesquisando as células pares (se A = X) ou ímpares (se A = Y) até encontrar o 1º branco, que é, então substituido
 				por 1.
 				2) reposiciona a cabeça no início da fita e transaciona o estado fs.
 		--> Subtração: 
-				1) No estado fr pesquisa as células pares (se A = X) ou ímpares (se A = Y) até encontrar o último símbolo 1, que é substituido por branco.
+				1) No estado qr pesquisa as células pares (se A = X) ou ímpares (se A = Y) até encontrar o último símbolo 1, que é substituido por branco.
 				2) Reposiciona a cabeça no início da fila e transaciona para o estado fs.
