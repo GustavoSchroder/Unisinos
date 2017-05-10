@@ -25,3 +25,51 @@ Função recursiva de KLEENE
 		--> Uma função é Turing-computável se e somente se é uma função recursiva parcial de Kleene.
 	Além disso também é possível  provar que uma função é Turing-computável em uma máquina que sempre para se e somente se é uma função recursiva
 	total de Kleene.
+
+	O domínio das funções recursivas de Kleene é o conjunto N dos números naturais.
+	
+	Composição: 
+		Sejam g, f1,f2, ..., fk funções parciais tais que: 
+			g: (f1, f2, ..., fk) : N^K -> N
+			f: (x1,x2, ..., xn) : N^n -> N para 1 <= i <= K
+		Então a composição das funções g, f1, f2, ..., fk resulta na função n, com tipo:
+			n (x1, x2, ..., xn) : N^n´-> N
+			que é definida como segue: n(x1, x2, ..., xn) = g(f(x1, ..., xn), f2(x1, ..., xn))
+			
+		Exemplo:
+		Supondo as seguintes funções básicas:
+			inc(x) = x + 1 ; sub(x) = x - 1 ; add(x, y) = x + y; sub(x, y) = x - y;
+		Pode-se definir funções para os seguintes polinômios por composição:
+			Polinômio 1: 5x + 3
+				poli1(x) = inc(inc(inc(add(x, add(add(x,x), add(x,x))))))
+			Polinômio 2: (2x + 3y) * 2
+				poli(x, y) = add(add(add(x,x), add(y, add(y,y))), add(add(x,x), add(y, add(y, add(y, y)))))
+	
+		poli(x) = inc(poli'(x))
+		poli'(x) = inc(poli''(x))
+		poli''(x) = inc(poli'''(x))
+		poli'''(x) = inc(poli''''(x))
+		poli''''(x) = add(...)
+		
+	Recursão:
+		Sejam f e g funções parciais tais que 
+			f(x1, x2, ..., xn) : N^n -> N
+			g(x1, x2, ..., xn) : N^n+2 -> N
+		Então a função n, com tipo:
+			n(x1, x2, ..., xn, y): N^n+1 -> N é definida por recursão a partir de f e g, se for construída como segue:
+				n(x1, x2, ..., xn, y) = f(x1, x2, ..., xn) se y = 0
+				n(x1, x2, ..., xn, y) = g(x1,x2, ..., xn,,(x1,...,xn,y))se y != 0
+				x * y = x + (x * (y - 1))
+		
+		Exemplo: 
+			add(x, mult(x, dec(y)) se y != 0
+			multi(x,y) = 0 se y = 0
+			--------------------------------
+			fat(n) = mult(n, fatdec(n))) se n != 0
+			fat(n) = 1 se n = 0
+			
+			mult(5, 3) = add(5, mult(5, dec(3)))
+			mult(5, dec(3)) = mult(5, 2) = add(5, mult(5, 2) = multi(5, 1) = add(5, mult(5, dec(1)) = mult(5, 0) = add(5, 0)
+			
+			5 + 10 + 15 + 20 = 50
+			
