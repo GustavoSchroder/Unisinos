@@ -72,4 +72,8 @@ Função recursiva de KLEENE
 			mult(5, dec(3)) = mult(5, 2) = add(5, mult(5, 2) = multi(5, 1) = add(5, mult(5, dec(1)) = mult(5, 0) = add(5, 0)
 			
 			5 + 10 + 15 + 20 = 50
-			
+	
+	
+	Minimização
+		O conceito de minimização apesar de não ser intuitivo em termos de recursão, é necessário para que as funções recursivas parciais
+		de Kleene possam representar qualquer função intuitivamente compatível.
