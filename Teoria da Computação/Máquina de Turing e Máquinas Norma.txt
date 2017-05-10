@@ -13,7 +13,7 @@ A simulação de P em uma máquina de Turing M, tem a seguinte organização:
 	-> Registrador Y: representação unários das células ímpares
 	
 		0 1 1 1 1 1 1 1 1 1 b 1 b 1 b
-	    b x y x y x y x y x y x y x y 
+	        b x y x y x y x y x y x y x y 
 		y = 4 
 
 	-> Rótulos de intruções: cada rótulo r de p coresponde a um estado qr de M. Os rótulos iniciais e finais correspondem aos estados iniciais e finais.
