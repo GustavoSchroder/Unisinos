@@ -1,0 +1,24 @@
+Pelo carater funcional e operacional foi base para muitas linguagens de programação.
+Do cálculo Lambda obtivemos: LISP, Standard ML, expressões Lambda, Haskell, F#, OCAML, CLOJURL, Expressões Lambda JAVA.
+
+Expressões ou termos Lambda
+-> Escrevemos funções lambda quando queremos definir uma função recursiva.
+-> Uma expressão Lambda temos duas coisas: Variáveis (pelo menos uma) e podemos ter constantes (opcionais).
+
+Aplicação:
+Aplicando a variável X a variável Y
+-> Se temos duas expressões Lambda uma com a variável X e outra com a variável Y podemos escrever outra juntando as mesmas. (X Y)
+-> A expressão Lambda é formada pela letra grega uma variável um ponto e outra expressão Lambda.
+
+Eliminação de parênteses
+  -> Associatividade a Esquerda MNP é equivalente a ((M N) P)
+Escopo Variável
+  -> Parenteses podem ser eliminados respeitando o escopo de uma variável.
+Precedência
+  -> Expressões tem precedência
+  
+  Propriedades
+  Variável Ligada: x está ligada em uma expressão lambda se está sobo escopo de um operador LambdaX nessa expressão.
+  
+  
+  
