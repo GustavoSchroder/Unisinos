@@ -1,0 +1,22 @@
+Funções Recursivas Parciais
+
+Formalismos de Kleene ara s funções recursivas parciais (sobre os naturais).
+  Funções primitivas (básicas)
+  Mecanismos de construção
+  -> Composição de funções
+    Compor uma função com várias outras.
+     n(x) = g(f(x))
+  -> Recursão
+    Garantidamente total no caso de Kleene.
+    Pois definimos primeiramente o caso base (caso 0) e no caso 0 chamamos a função.
+    Para um valor y + 1 calculamos g aplicados a um valor de entrada.
+    As funções recursivas de Kleene sempre param.
+  -> Mimização
+    Se começarmos a calcular com z valendo 0 e obtermos um valor diferente de 0 z++ e testamos o próximo. 
+    Todos os valores são definidos até que chegamos a um valor de 0 que é zero.
+  
+  Primeiro formalismo puramente funcional que define as funções computáveis. Equivalente as máquinas de turing.
+  Qualquer função de uma máquina de Turing deve ser computável neste formalismo, vice e versa.
+  
+  Permitiram pela primeira vez ter uma definição puramente funcional, se conseguiu mostrar que em um formalismo puramente algébrico ter um
+  formalismo computável.
